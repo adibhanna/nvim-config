@@ -14,12 +14,30 @@ end
 telescope.setup({
 	-- configure custom mappings
 	defaults = {
+		prompt_prefix = "  ",
+		layout_config = {
+			horizontal = {
+				prompt_position = "top",
+			},
+			vertical = {
+				mirror = false,
+			},
+			width = 0.7,
+			height = 0.50,
+			preview_cutoff = 120,
+		},
+		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		color_devicons = true,
+		preview = {
+			-- disable preview window
+			hide_on_startup = true,
+		},
 		mappings = {
 			i = {
 				["<C-k>"] = actions.move_selection_previous, -- move to prev result
 				["<C-j>"] = actions.move_selection_next, -- move to next result
-                ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
-				["<esc>"] = actions.close
+				["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+				["<esc>"] = actions.close,
 			},
 		},
 	},
