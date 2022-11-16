@@ -102,7 +102,7 @@ return packer.startup(function(use)
 
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" })
 
-	-- use({ "goolord/alpha-nvim" }) -- dashboard
+	use({ "goolord/alpha-nvim" }) -- dashboard
 
 	if packer_bootstrap then
 		require("packer").sync()
