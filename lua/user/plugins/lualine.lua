@@ -3,11 +3,11 @@ if not status then
 	return
 end
 
-local gruvbox = require("lualine.themes.gruvbox")
+local ayu = require("lualine.themes.ayu")
 
 lualine.setup({
 	options = {
-		theme = gruvbox,
+		theme = ayu,
 		icons_enabled = true,
 	},
 	sections = {
